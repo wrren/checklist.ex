@@ -1,0 +1,18 @@
+<h2>Show list use</h2>
+
+<ul>
+
+  <li>
+    <strong>List:</strong>
+    <%= @list_use.list_id %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @list_use.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: list_use_path(@conn, :edit, @list, @list_use) %>
+<%= link "Back", to: list_use_path(@conn, :index, @list) %>

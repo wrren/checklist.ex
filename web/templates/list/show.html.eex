@@ -1,0 +1,19 @@
+<h2>Show list</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @list.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @list.description %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: list_path(@conn, :edit, @list) %>
+<%= link "Back", to: list_path(@conn, :index) %>
+<%= link "New Check", to: list_check_path(@conn, :new, @list) %>

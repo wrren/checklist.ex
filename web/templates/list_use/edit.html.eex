@@ -1,0 +1,6 @@
+<h2>Edit list use</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: list_use_path(@conn, :update, @list, @list_use) %>
+
+<%= link "Back", to: list_use_path(@conn, :index, @list) %>

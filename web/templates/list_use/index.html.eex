@@ -1,0 +1,28 @@
+<h2>Listing list uses</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>List</th>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for list_use <- @list_uses do %>
+    <tr>
+      <td><%= list_use.list_id %></td>
+      <td><%= list_use.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: list_use_path(@conn, :show, @list, list_use), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: list_use_path(@conn, :edit, @list, list_use), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: list_use_path(@conn, :delete, @list, list_use), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New list use", to: list_use_path(@conn, :new, @list) %>
